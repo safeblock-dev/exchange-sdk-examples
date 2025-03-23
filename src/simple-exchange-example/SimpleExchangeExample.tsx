@@ -147,9 +147,7 @@ export default function SimpleExchangeExample() {
     const net = await signer.provider._detectNetwork()
 
     if (net.chainId.toString() !== quota.tokenIn.network.chainId.toString()) {
-      const result = await requestNetworkChange(quota.tokenIn.network, signer).catch(() => null)
-
-      if (!result) return
+      await requestNetworkChange(quota.tokenIn.network, signer).catch(() => null)
     }
 
     for await (const data of quota?.executorCallData) {
