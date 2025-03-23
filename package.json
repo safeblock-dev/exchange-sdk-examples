@@ -4,7 +4,8 @@
   "description": "Usage examples for SafeBlock's exchange SDK",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --host"
+    "dev": "vite --host",
+    "build": "vite build"
   },
   "author": "",
   "license": "MIT",
