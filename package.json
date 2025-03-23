@@ -1,0 +1,34 @@
+{
+  "name": "exchange-sdk-examples",
+  "version": "1.0.0",
+  "description": "Usage examples for SafeBlock's exchange SDK",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@safeblock/blockchain-utils": "^0.3.4",
+    "@safeblock/exchange-sdk": "^0.3.3",
+    "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react-swc": "^3.8.1",
+    "bignumber.js": "^9.1.2",
+    "clsx": "^2.1.1",
+    "ethers": "^6.13.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.15"
+  }
+}

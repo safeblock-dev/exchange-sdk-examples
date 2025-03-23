@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body, html {
+  @apply min-w-[300px] w-full h-full overflow-hidden overflow-y-auto;
+}
+
+* {
+  @apply font-sans box-border font-normal;
+
+  font-optical-sizing: auto;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  user-select: none;
+}
+
+#root {
+  @apply w-full h-full grid place-items-center p-8;
+}
