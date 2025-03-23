@@ -147,7 +147,9 @@ export default function SimpleExchangeExample() {
     const net = await signer.provider._detectNetwork()
 
     if (net.chainId.toString() !== quota.tokenIn.network.chainId.toString()) {
-      await requestNetworkChange(quota.tokenIn.network, signer)
+      const result = await requestNetworkChange(quota.tokenIn.network, signer).catch(() => null)
+
+      if (!result) return
     }
 
     for await (const data of quota?.executorCallData) {
@@ -158,7 +160,12 @@ export default function SimpleExchangeExample() {
         return
       }
 
-      const tx = await signer.sendTransaction(transaction)
+      const tx = await signer.sendTransaction(transaction).catch(() => null)
+
+      if (!tx) {
+        setLoading(false)
+        return
+      }
       await tx.wait(1)
     }
 
@@ -197,7 +204,7 @@ export default function SimpleExchangeExample() {
         />
 
         { address && (
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 items-center">
             {/* Display the user's balance of the selected input token */ }
             <span className="text-sm text-gray-500">
               Balance: { balance.toReadable() }
