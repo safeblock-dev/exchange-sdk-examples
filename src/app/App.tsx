@@ -34,7 +34,7 @@ export default function App() {
 
               <div className="flex flex-col gap-4">
                 <h2 className="m-0 p-0 font-bold text-xl">
-                  Relative links
+                  Related links
                 </h2>
 
                 <div className="flex flex-col gap-4 items-start max-w-lg">
